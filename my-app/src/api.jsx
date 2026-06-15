@@ -2,7 +2,6 @@ const BASE_URL="https://jsonplaceholder.typicode.com";
 
 export async function getdata(endpoint){
     const response=await fetch(`${BASE_URL}/${endpoint}`);
-    //handle non-200 responses
     if(!response.ok){
         throw new Error(`HTTP ERROR! STATUS:${response.status}`);
     }
